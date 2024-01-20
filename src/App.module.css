@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    letter-spacing: -0.0375rem;
+}
+
+.main {
+    padding-bottom: 48px;
+}
+
+.headerContainer {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    gap: 40px;
+}
+
+.container .left {
+    flex: 1;
+}
+
+.container .left h1 {
+    font-size: 4rem;
+    color: #3a4b5c;
+}
+
+.container .left p {
+    font-size: 1.6rem;
+    color: #6a7d8b;
+}
+
+.container .left input[type='number'] {
+    font-size: 1.6rem;
+    margin: 8px 0;
+    padding: 8px 0;
+    width: 100%;
+    background-color: transparent;
+    color: #555;
+    border: 2px solid transparent;
+    border-bottom-color: #ccc;
+}
+
+.container .left input[type='number']:focus-visible {
+    outline: none;
+}
+
+.container .left input[type='number']:focus {
+    border-bottom-color: #069;
+    transition: all ease 0.25s;
+}
+
+.container .left button {
+    font-size: 1.6rem;
+    margin: 8px 0;
+    padding: 12px;
+    width: 100%;
+    background-color: #069;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+}
+
+.container .left button:hover {
+    cursor: pointer;
+    background-color: #09f;
+    transition: all ease 0.125s;
+}
+
+.container .left button:disabled {
+    opacity: 0.5;
+}
+
+.container .right {
+    flex: 1;
+    display: flex;
+}
+
+.container .right .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .right .rightBig {
+    flex: 1;
+    display: flex;
+}
+
+.container .right .rightArrow {
+    position: absolute;
+    background-color: #227c9d;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -32px;
+    margin-top: 144px;
+}
+
+.container .right .rightArrow:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all ease 0.25s;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .container .right .rightArrow {
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .container .right .grid {
+        grid-template-columns: 1fr;
+    }
+}
